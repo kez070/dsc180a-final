@@ -37,12 +37,7 @@ def main(targets):
         convert_to_light()
     
     if 'calculate_m' in targets:
-        user_edits = {}
-        revert_pairs = []
 
-        mutual_revert_pairs = []
-        mutual_revert_users = []
-        
         calculate_M()
 
 

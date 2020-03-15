@@ -286,7 +286,10 @@ def getMutual():
 
 
 def calculate_M():
-
+    global revert_pairs
+    global mutual_revert_users
+    global user_edits
+    global revert_pairs
     m_values = {}
     page_edits = []
     current_page_name = ''
