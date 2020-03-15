@@ -286,6 +286,7 @@ def getMutual():
 
 
 def calculate_M():
+    print('hello')
     global revert_pairs
     global mutual_revert_users
     global user_edits
