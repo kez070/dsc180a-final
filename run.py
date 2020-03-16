@@ -11,7 +11,7 @@ import glob
 
 DATA_PARAMS = 'config/data-params.json'
 TEST_PARAMS = 'config/test-params.json'
-PROCESS_PARAMS = 'config/process-config.json'
+
 
 def load_params(fp):
     with open(fp) as fh:
@@ -40,6 +40,14 @@ def main(targets):
 
         calculate_M()
 
+    if 'test-project' in targets:
+        fp = load_params(TEST_PARAMS)['fp']
+        output = load_params(TEST_PARAMS)['output']
+        unzip(fp,output)
+        fp = glob.glob(load_params(TEST_PARAMS)['output']+"/*")[0]
+        parse_unzipped(fp)
+        convert_to_light()
+        calculate_M()
 
     return
 
